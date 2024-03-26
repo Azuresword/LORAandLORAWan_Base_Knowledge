@@ -1,7 +1,9 @@
 # LoRa®调制(物理层)   
-
+#lora信号基础
+#lora物理层
 ## 基础概念
 ### chirp
+#chirp
 
 (Chirp: Compressed High Intensity Radar Pulse).
 ![[Pasted image 20240321123643.png]]
@@ -37,6 +39,7 @@ end : 868 162 500 Hz = 868 100 000 + 125 000/2
 ![[Pasted image 20240321181526.png]]
 
 ### 符号传输时间
+#符号传输时间计算
 ![[Pasted image 20240321181633.png]]
 在中心频率和带宽一致的情况下 传输时间取决于 SF值， 
 
@@ -45,12 +48,14 @@ $T_{symbol} =\frac{2^{SF}}{BD width}$
 在125KHZ情况下，不同SF值传输的时间
 ![[Pasted image 20240321182520.png]]
 ### Lora 在空气中的传输时间
+#time_in_air
 Lora具体的一帧数据包括了，payload，preamble，CRC 三部分
 ![[Pasted image 20240321182730.png]]
 $Time\ on\ air = n_{symbol}*T{symbol}$
 $n_{symbol}$是lora的一帧数据的总的字节数
 
 ## LoRa® and LoRaWAN® bit rate
+#lora_and_lorawan_bit_rate
 ### Lora bit rate
 计算公式：
 
@@ -75,6 +80,8 @@ $\text{Bit Rate}_{\text{2}} = \frac{12 \times 125,000}{2^{12}} = \frac{1,500,000
 案例1的比特率大约为6836 bps，案例2的比特率大约为366 bps。这表明在LoRa通信中，较高的扩频因子会减少比特率，但可以增强信号的穿透力和覆盖范围。
 
 ## 编码率对比特率的影响
+#coding_rate
+
 
 CR coding rate  和 bit rate 之间存在相关关系  
 
